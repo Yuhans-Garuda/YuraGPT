@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "ExportGPT - Yuhans",
+  "name": "YuraGPT - Yuhansnurfw",
   "description": "Sebuah ekstensi yang dapat membackup percakapan ChatGPT",
   "version": "1.0.1",
   "icons": {
@@ -10,7 +10,7 @@
     "128": "assets/icon128.png"
   },
   "action": {
-    "default_title": "ExportGPT - Yuhans",
+    "default_title": "YuraGPT - Yuhansnurfw",
     "default_popup": "popup.html",
     "default_icon": {
       "16": "assets/icon16.png",
@@ -54,7 +54,7 @@
         "default": "Ctrl+Shift+P",
         "mac": "Command+Shift+P"
       },
-      "description": "ExportGPT: Print/Save as PDF (tab aktif)"
+      "description": "YuraGPT: Print/Save as PDF (tab aktif)"
     }
   }
 }
