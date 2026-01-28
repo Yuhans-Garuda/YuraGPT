@@ -1,4 +1,4 @@
-# ExportGPT - Yuhans
+# YuraGPT - ChatGPT Exporter
 
 Ekstensi browser untuk **backup / export** percakapan dari ChatGPT (chatgpt.com & chat.openai.com).
 Semua fitur **gratis** (tanpa watermark & tanpa tracking).
@@ -15,7 +15,7 @@ Semua fitur **gratis** (tanpa watermark & tanpa tracking).
 1. Buka `chrome://extensions`
 2. Aktifkan **Developer mode**
 3. Klik **Load unpacked**
-4. Pilih folder `ExportGPT-Yuhans`
+4. Pilih folder `YuraGPT`
 
 ## Cara pakai
 1. Buka percakapan di ChatGPT
