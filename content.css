@@ -1,0 +1,34 @@
+
+#exportgpt-fab{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:999999;
+  border:1px solid rgba(255,255,255,.18);
+  background: linear-gradient(135deg, rgba(102,246,255,.18), rgba(157,107,255,.16));
+  color: rgba(255,255,255,.92);
+  padding:10px 12px;
+  border-radius:999px;
+  cursor:pointer;
+  font: 700 12px/1 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  box-shadow: 0 14px 40px rgba(0,0,0,.35), 0 0 24px rgba(102,246,255,.10);
+  display:flex;
+  align-items:center;
+  gap:8px;
+  backdrop-filter: blur(10px);
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+#exportgpt-fab:hover{
+  transform: translateY(-1px);
+  border-color: rgba(102,246,255,.35);
+  box-shadow: 0 16px 46px rgba(0,0,0,.42), 0 0 28px rgba(102,246,255,.16);
+}
+#exportgpt-fab:active{transform: translateY(0px) scale(.99)}
+#exportgpt-fab .eg-dot{
+  width:10px;
+  height:10px;
+  border-radius:99px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.95), rgba(102,246,255,.8) 40%, rgba(157,107,255,.7));
+  box-shadow: 0 0 16px rgba(102,246,255,.22);
+}
+#exportgpt-fab .eg-label{letter-spacing:.3px}

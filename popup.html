@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ExportGPT - Yuhans</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="brand">
+        <img class="logo" src="assets/icon48.png" alt="ExportGPT" />
+        <div>
+          <div class="title">YuraGPT <span class="accent">- Yuhansnurfw</span></div>
+          <div class="subtitle">Export percakapan ChatGPT, gratis dan opensource</div>
+        </div>
+      </div>
+      <div class="status" id="status">Mendeteksi tab…</div>
+    </header>
+
+    <main class="main">
+      <div class="card">
+        <div class="cardTitle">Export</div>
+        <div class="grid">
+          <button class="btn primary" id="btnMd">Download Markdown (.md)</button>
+          <button class="btn" id="btnHtml">Download HTML (.html)</button>
+          <button class="btn" id="btnJson">Download JSON (.json)</button>
+          <button class="btn glow" id="btnPdf">Print / Save as PDF</button>
+          <button class="btn subtle" id="btnCopy">Copy Markdown</button>
+        </div>
+        <div class="hint">
+          Untuk PDF, ekstensi akan membuka halaman siap-print. Pilih <b>Save as PDF</b> di dialog Print.
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="cardTitle">Quick Settings</div>
+        <div class="toggles">
+          <label class="toggle">
+            <input type="checkbox" id="optFooter" />
+            <span>Footer sosial (@yuhansnurfw)</span>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="optMeta" />
+            <span>Sertakan metadata (judul + url)</span>
+          </label>
+          <label class="toggle">
+            <input type="checkbox" id="optDate" />
+            <span>Tambahkan tanggal pada nama file</span>
+          </label>
+        </div>
+        <div class="row">
+          <a class="link" id="openOptions" href="#">Advanced settings</a>
+          <span class="kbd">Shortcut PDF: Ctrl/⌘ + Shift + P</span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <a class="handle" href="https://yuranesia.web.id" target="_blank" rel="noopener" id="_yh_link">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+        </svg>
+        @yuhansnurfw
+      </a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>

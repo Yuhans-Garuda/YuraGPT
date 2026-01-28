@@ -1,0 +1,236 @@
+:root {
+  --bg0: #070A12;
+  --bg1: #0B1224;
+  --card: rgba(255, 255, 255, .06);
+  --card2: rgba(255, 255, 255, .08);
+  --stroke: rgba(255, 255, 255, .10);
+  --text: rgba(255, 255, 255, .92);
+  --muted: rgba(255, 255, 255, .62);
+  --accent: #66F6FF;
+  --accent2: #9D6BFF;
+  --good: #46ff8a;
+  --bad: #ff4d6d;
+  --shadow: 0 12px 40px rgba(0, 0, 0, .45);
+}
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  width: 360px;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(900px 500px at 15% 5%, rgba(157, 107, 255, .35), transparent 60%),
+    radial-gradient(700px 500px at 90% 20%, rgba(102, 246, 255, .28), transparent 55%),
+    linear-gradient(160deg, var(--bg0), var(--bg1));
+  color: var(--text);
+  font: 13px/1.4 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none
+}
+
+a:hover {
+  text-decoration: underline
+}
+
+.app {
+  padding: 14px;
+  padding-bottom: 50px
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px
+}
+
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center
+}
+
+.logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .35)
+}
+
+.title {
+  font-weight: 800;
+  letter-spacing: .2px;
+  font-size: 15px
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 12px
+}
+
+.accent {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent
+}
+
+.status {
+  padding: 8px 10px;
+  border: 1px solid var(--stroke);
+  background: rgba(0, 0, 0, .18);
+  border-radius: 12px;
+  color: var(--muted)
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.card {
+  border: 1px solid var(--stroke);
+  background: var(--card);
+  border-radius: 16px;
+  padding: 12px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px)
+}
+
+.cardTitle {
+  font-weight: 800;
+  letter-spacing: .2px;
+  margin-bottom: 10px
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px
+}
+
+.btn {
+  border: 1px solid var(--stroke);
+  background: rgba(255, 255, 255, .04);
+  color: var(--text);
+  border-radius: 14px;
+  padding: 10px 10px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease, box-shadow .12s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(102, 246, 255, .35);
+  background: rgba(255, 255, 255, .07)
+}
+
+.btn:active {
+  transform: translateY(0px) scale(.99)
+}
+
+.primary {
+  background: linear-gradient(135deg, rgba(102, 246, 255, .18), rgba(157, 107, 255, .16));
+  border-color: rgba(102, 246, 255, .35)
+}
+
+.glow {
+  box-shadow: 0 0 0 rgba(102, 246, 255, 0);
+}
+
+.glow:hover {
+  box-shadow: 0 0 0 1px rgba(102, 246, 255, .18), 0 0 24px rgba(102, 246, 255, .12)
+}
+
+.subtle {
+  grid-column: 1 / -1;
+  background: rgba(0, 0, 0, .18)
+}
+
+.hint {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 12px
+}
+
+.toggles {
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.toggle {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--muted);
+  font-weight: 600
+}
+
+.toggle input {
+  accent-color: var(--accent)
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px
+}
+
+.kbd {
+  color: var(--muted);
+  font-size: 11px;
+  border: 1px solid var(--stroke);
+  padding: 4px 6px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, .18)
+}
+
+.footer {
+  position: fixed;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999
+}
+
+.handle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  background: rgba(11, 18, 36, .92);
+  backdrop-filter: blur(12px);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 11px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all .15s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .4)
+}
+
+.handle:hover {
+  background: rgba(102, 246, 255, .12);
+  border-color: rgba(102, 246, 255, .35);
+  transform: scale(1.03);
+  box-shadow: 0 4px 24px rgba(102, 246, 255, .2)
+}
+
+.handle svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor
+}

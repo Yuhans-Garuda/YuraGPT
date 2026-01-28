@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ExportGPT Print</title>
+  <link rel="stylesheet" href="print.css" />
+</head>
+
+<body>
+  <div class="topbar noPrint">
+    <div class="topLeft">
+      <div class="badge">YuraGPT - Yuhans</div>
+      <div class="topTitle" id="topTitle">Menyiapkan dokumen…</div>
+    </div>
+    <div class="topActions">
+      <button class="btn" id="btnPrint">Print / Save as PDF</button>
+      <button class="btn subtle" id="btnClose">Close</button>
+    </div>
+  </div>
+
+  <main class="wrap" id="wrap">
+    <section class="docHeader">
+      <h1 class="docTitle" id="docTitle">ChatGPT Conversation</h1>
+      <div class="docMeta" id="docMeta"></div>
+    </section>
+
+    <div class="messages" id="messages"></div>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footerInner">
+      <a class="soc" id="lTikTok" target="_blank" rel="noreferrer" aria-label="TikTok"></a>
+      <a class="soc" id="lInstagram" target="_blank" rel="noreferrer" aria-label="Instagram"></a>
+      <a class="soc" id="lThreads" target="_blank" rel="noreferrer" aria-label="Threads"></a>
+      <span class="handle" id="handle">@yuhansnurfw</span>
+    </div>
+  </footer>
+
+  <script src="print.js"></script>
+</body>
+
+</html>

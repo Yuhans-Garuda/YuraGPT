@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>YuraGPT • Settings</title>
+  <style>
+    :root {
+      --bg: #0B1224;
+      --card: rgba(255, 255, 255, .06);
+      --stroke: rgba(255, 255, 255, .12);
+      --text: rgba(255, 255, 255, .92);
+      --muted: rgba(255, 255, 255, .62);
+      --accent: #66F6FF;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(160deg, #050712, var(--bg));
+      color: var(--text);
+      font: 14px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial
+    }
+
+    .wrap {
+      max-width: 780px;
+      margin: 24px auto;
+      padding: 0 16px
+    }
+
+    .card {
+      border: 1px solid var(--stroke);
+      background: var(--card);
+      border-radius: 18px;
+      padding: 16px 16px;
+      margin-bottom: 12px
+    }
+
+    h1 {
+      margin: 0 0 6px;
+      font-size: 20px
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted)
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+      padding: 10px 0;
+      border-top: 1px solid rgba(255, 255, 255, .08)
+    }
+
+    .row:first-of-type {
+      border-top: none
+    }
+
+    label {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      color: var(--muted);
+      font-weight: 700
+    }
+
+    input[type=checkbox] {
+      accent-color: var(--accent)
+    }
+
+    .save {
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 10px
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>YuraGPT - Yuhans</h1>
+      <p>Semua fitur gratis. Tidak ada tracking, tidak ada watermark. Footer sosial bisa kamu hidupkan/matikan sesuka
+        hati :D</p>
+      <div class="save" id="status"></div>
+    </div>
+
+    <div class="card">
+      <div class="row">
+        <label><input type="checkbox" id="includeFooter" /> Footer sosial (@yuhansnurfw) di bawah halaman</label>
+      </div>
+      <div class="row">
+        <label><input type="checkbox" id="includeMeta" /> Metadata (judul + url)</label>
+      </div>
+      <div class="row">
+        <label><input type="checkbox" id="filenameWithDate" /> Tambahkan tanggal pada nama file</label>
+      </div>
+      <div class="row">
+        <label><input type="checkbox" id="autoPrint" /> Auto-open dialog Print saat buka halaman PDF</label>
+      </div>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+
+</html>

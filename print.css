@@ -1,0 +1,483 @@
+:root {
+  /* Screen (preview) theme, inspired by ChatGPT dark UI */
+  --bg: #0b0f14;
+  --panel: #0f1722;
+  --panel2: #0c141f;
+  --border: rgba(255, 255, 255, .10);
+  --text: rgba(255, 255, 255, .92);
+  --muted: rgba(255, 255, 255, .62);
+  --link: #7dd3fc;
+  --codebg: rgba(255, 255, 255, .06);
+  --shadow: 0 18px 55px rgba(0, 0, 0, .42);
+  --footerH: 56px;
+
+  /* Print theme */
+  --pText: #111;
+  --pMuted: #444;
+  --pBorder: #ddd;
+}
+
+* {
+  box-sizing: border-box
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.6 ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+a {
+  color: inherit;
+  text-decoration: none
+}
+
+a:hover {
+  color: var(--link)
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  background: rgba(11, 15, 20, .78);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.topLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, .04);
+  font-weight: 800;
+  letter-spacing: .2px;
+  font-size: 12px;
+  width: max-content;
+}
+
+.topTitle {
+  color: var(--muted);
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+
+.topActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap
+}
+
+.btn {
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, .04);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-weight: 800;
+  transition: transform .12s ease, border-color .12s ease, background .12s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  border-color: rgba(125, 211, 252, .35);
+  background: rgba(255, 255, 255, .06)
+}
+
+.btn:active {
+  transform: translateY(0px) scale(.99)
+}
+
+.btn.subtle {
+  background: rgba(0, 0, 0, .18)
+}
+
+.wrap {
+  max-width: 980px;
+  margin: 18px auto;
+  padding: 0 14px calc(var(--footerH) + 22px);
+}
+
+.docHeader {
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, .04), rgba(255, 255, 255, .02));
+  border-radius: 18px;
+  padding: 16px 16px;
+  box-shadow: var(--shadow);
+}
+
+.docTitle {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: .2px;
+  white-space: normal;
+  overflow-wrap: anywhere
+}
+
+.docMeta {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  overflow-wrap: anywhere
+}
+
+.messages {
+  margin-top: 14px
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin: 14px 0;
+}
+
+.row.user {
+  flex-direction: row-reverse;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, .04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, .86);
+  font-weight: 900;
+  font-size: 12px;
+  flex: 0 0 auto;
+}
+
+.bubble {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 18px;
+  padding: 12px 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+  min-width: 0;
+  max-width: 100%;
+}
+
+.row.user .bubble {
+  background: var(--panel2);
+}
+
+.role {
+  color: var(--muted);
+  font-weight: 900;
+  letter-spacing: .14px;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.content {
+  margin-top: 10px;
+  overflow-wrap: anywhere
+}
+
+.content p {
+  margin: 0 0 10px
+}
+
+.content p:last-child {
+  margin-bottom: 0
+}
+
+.content ul,
+.content ol {
+  margin: 8px 0 10px 20px;
+  padding: 0
+}
+
+.content li {
+  margin: 4px 0
+}
+
+.content blockquote {
+  margin: 10px 0;
+  padding: 8px 12px;
+  border-left: 3px solid rgba(125, 211, 252, .55);
+  background: rgba(255, 255, 255, .03);
+  border-radius: 10px
+}
+
+.content pre {
+  margin: 10px 0;
+  padding: 12px;
+  background: var(--codebg);
+  border: 1px solid rgba(255, 255, 255, .10);
+  border-radius: 14px;
+  overflow: auto
+}
+
+.content code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13px
+}
+
+.content :not(pre)>code {
+  padding: 2px 6px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .10)
+}
+
+.content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px 0;
+  font-size: 13px
+}
+
+.content th,
+.content td {
+  border: 1px solid rgba(255, 255, 255, .12);
+  padding: 8px 10px;
+  vertical-align: top
+}
+
+.content th {
+  background: rgba(255, 255, 255, .04)
+}
+
+.content a {
+  color: var(--link)
+}
+
+.attachments {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.attachment {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, .12);
+  background: rgba(255, 255, 255, .03);
+}
+
+.attIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, .14);
+  background: rgba(255, 255, 255, .04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, .80);
+  flex: 0 0 auto;
+}
+
+.attIcon svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor
+}
+
+.attMeta {
+  min-width: 0
+}
+
+.attName {
+  font-weight: 900;
+  letter-spacing: .1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 620px
+}
+
+.attType {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 2px
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--footerH);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(11, 15, 20, .78);
+  border-top: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+}
+
+.footerInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--muted)
+}
+
+.soc {
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  color: rgba(255, 255, 255, .70)
+}
+
+.soc svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor
+}
+
+.handle {
+  padding: 4px 10px;
+  border: 1px dashed rgba(255, 255, 255, .22);
+  border-radius: 999px;
+  font-weight: 800;
+  letter-spacing: .2px;
+  color: rgba(255, 255, 255, .85)
+}
+
+@media print {
+
+  /* Hide control bar in print */
+  .noPrint {
+    display: none !important
+  }
+
+  html,
+  body {
+    background: #fff;
+    color: var(--pText)
+  }
+
+  a {
+    color: inherit
+  }
+
+  .wrap {
+    max-width: none;
+    margin: 0;
+    padding: 0 0 calc(var(--footerH) + 10px)
+  }
+
+  .docHeader {
+    box-shadow: none;
+    background: #fff;
+    border-color: var(--pBorder)
+  }
+
+  .docMeta {
+    color: var(--pMuted)
+  }
+
+  .avatar {
+    background: #fff;
+    border-color: var(--pBorder);
+    color: #333
+  }
+
+  .bubble {
+    box-shadow: none;
+    background: #fff;
+    border-color: var(--pBorder)
+  }
+
+  .row.user .bubble {
+    background: #fff
+  }
+
+  .role {
+    color: var(--pMuted)
+  }
+
+  .content pre {
+    background: #fff;
+    border-color: var(--pBorder)
+  }
+
+  .content :not(pre)>code {
+    background: #fff;
+    border-color: var(--pBorder)
+  }
+
+  .content blockquote {
+    background: #fff;
+    border-color: #bbb
+  }
+
+  .content th,
+  .content td {
+    border-color: var(--pBorder)
+  }
+
+  .content th {
+    background: #fff
+  }
+
+  .attachment {
+    background: #fff;
+    border-color: var(--pBorder)
+  }
+
+  .attIcon {
+    background: #fff;
+    border-color: var(--pBorder);
+    color: #333
+  }
+
+  .attType {
+    color: var(--pMuted)
+  }
+
+  .footer {
+    background: #fff;
+    border-top: 1px solid var(--pBorder)
+  }
+
+  .footerInner {
+    color: var(--pMuted)
+  }
+
+  .soc {
+    color: #333
+  }
+
+  .handle {
+    color: #333;
+    border-color: var(--pBorder)
+  }
+
+  @page {
+    margin: 14mm 14mm 20mm 14mm;
+  }
+}
